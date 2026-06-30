@@ -14,7 +14,7 @@ from .common import StageConfig, train_stage
 from losses import tau_softplus_seg_loss
 
 
-def make_config(resume_from: Path, output_dir: Path, epochs: int = 3500) -> StageConfig:
+def make_config(resume_from: Path, output_dir: Path, epochs: int = 2000) -> StageConfig:
     return StageConfig(
         name="stage2_v331_softplus",
         seg_loss_fn=lambda logits, targets: tau_softplus_seg_loss(

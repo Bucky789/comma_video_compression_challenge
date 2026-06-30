@@ -17,7 +17,7 @@ from .common import StageConfig, train_stage
 from losses import ce_seg_loss
 
 
-def make_config(output_dir: Path, epochs: int = 3000) -> StageConfig:
+def make_config(output_dir: Path, epochs: int = 2500) -> StageConfig:
     return StageConfig(
         name="stage1_v328_ce",
         seg_loss_fn=lambda logits, targets: ce_seg_loss(logits, targets),

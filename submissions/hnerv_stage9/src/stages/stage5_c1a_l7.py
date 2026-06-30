@@ -17,7 +17,7 @@ from .common import StageConfig, train_stage
 from losses import l7_softplus_seg_loss
 
 
-def make_config(resume_from: Path, output_dir: Path, epochs: int = 5000) -> StageConfig:
+def make_config(resume_from: Path, output_dir: Path, epochs: int = 4000) -> StageConfig:
     return StageConfig(
         name="stage5_c1a_l7",
         seg_loss_fn=lambda logits, targets: l7_softplus_seg_loss(

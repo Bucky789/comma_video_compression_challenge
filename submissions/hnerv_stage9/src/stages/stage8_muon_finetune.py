@@ -9,7 +9,7 @@ from .common import StageConfig
 from losses import l7_softplus_seg_loss
 
 
-def make_config(resume_from: Path, output_dir: Path, epochs: int = 6000,
+def make_config(resume_from: Path, output_dir: Path, epochs: int = 5000,
                 muon_weight_decay: float = 5e-4) -> StageConfig:
     return StageConfig(
         name="stage8_muon_finetune",
