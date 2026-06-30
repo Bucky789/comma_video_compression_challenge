@@ -232,7 +232,8 @@ def train_stage(cfg: StageConfig, device: torch.device,
             archive = build_archive(
                 ema_decoder.state_dict(), ema_latents.cpu(),
                 meta_dict={"n_pairs": n_pairs, "latent_dim": 28, "base_channels": 36,
-                           "eval_size": list(EVAL_SIZE)})
+                           "eval_size": list(EVAL_SIZE)},
+                search_order=False)
             archive_size = len(archive)
             eval_decoder_sd, eval_lat, _, _ = parse_archive(archive)
             eval_dec = HNeRVDecoder(latent_dim=28, base_channels=36, eval_size=EVAL_SIZE).to(device)
