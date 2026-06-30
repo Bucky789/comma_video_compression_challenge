@@ -1,0 +1,8 @@
+{
+  "stage": "stage1_v328_ce",
+  "score": 0.91856367800199,
+  "seg_distortion": 0.005855373963713646,
+  "pose_distortion": 0.003560593919052432,
+  "archive_bytes": 216759,
+  "epoch": 50
+}
