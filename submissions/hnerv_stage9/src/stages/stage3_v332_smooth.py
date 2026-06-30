@@ -13,7 +13,7 @@ from .common import StageConfig, train_stage
 from losses import smooth_disagreement_seg_loss
 
 
-def make_config(resume_from: Path, output_dir: Path, epochs: int = 1500) -> StageConfig:
+def make_config(resume_from: Path, output_dir: Path, epochs: int = 1000) -> StageConfig:
     return StageConfig(
         name="stage3_v332_smooth",
         seg_loss_fn=lambda logits, targets: smooth_disagreement_seg_loss(
