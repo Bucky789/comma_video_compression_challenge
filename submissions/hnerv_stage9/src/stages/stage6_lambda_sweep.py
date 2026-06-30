@@ -23,7 +23,7 @@ def make_config(resume_from: Path, output_dir: Path, epochs: int = 2000) -> Stag
             logits, targets, tau=0.3, l7_threshold=1.0, l7_mult=4.0),
         epochs=epochs,
         eval_every=25,
-        batch_size=4,
+        batch_size=16,
         ema_decay=0.999,
         use_muon=False,
         adamw_lr=3e-5,

@@ -90,7 +90,7 @@ def main():
         epochs=2000,
         lr=1e-4,
         lr_floor=1e-7,
-        batch_size=4,
+        batch_size=16,
         eval_every=25,
         ema_decay=0.999,
         shared_state=shared_state,
