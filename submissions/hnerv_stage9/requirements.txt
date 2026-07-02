@@ -1,0 +1,5 @@
+torch
+brotli
+safetensors
+einops
+timm

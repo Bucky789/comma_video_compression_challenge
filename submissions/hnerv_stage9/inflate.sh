@@ -23,6 +23,5 @@ while IFS= read -r line; do
   [ ! -f "$SRC" ] && echo "ERROR: ${SRC} not found" >&2 && exit 1
 
   printf "Inflating %s ... " "$line"
-  cd "$ROOT"
-  python -m "submissions.${SUB_NAME}.inflate" "$SRC" "$DST"
+  python "$HERE/inflate.py" "$SRC" "$DST"
 done < "$FILE_LIST"
